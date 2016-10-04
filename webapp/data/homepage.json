@@ -1,0 +1,20 @@
+{
+	"carouselItems": [
+	           {
+	        	   "carouselCaption": "First Image",
+	        	   "carouselMessage": "first image in homepage",
+	        	   "carouselImage": "KPS_5833.JPG"
+	           },
+	           {
+	        	   "carouselCaption": "Second Image",
+	        	   "carouselMessage": "Second image in homepage",
+	        	   "carouselImage": "big.JPG"
+	           },
+	           {
+	        	   "carouselCaption": "Third Image",
+	        	   "carouselMessage": "Third image in homepage",
+	        	   "carouselImage": "KPS_5842.JPG"
+	           }
+	           ],
+	           "_comment" : "Place the images under webapp/images/homepage and use the image names for carouselImage option"
+}

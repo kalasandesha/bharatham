@@ -1,0 +1,21 @@
+.footer-links::after {
+	content: " | ";
+}
+
+.footer-links:last-child::after {
+	content: "";
+}
+
+a.footer-links {
+	text-decoration: none;
+}
+
+.footer-main-content {
+	border-top: 2px solid #29211F;
+	background-color: #ddd;
+}
+
+.footer-content {
+	margin-left: auto;
+	margin-right: auto;
+}
