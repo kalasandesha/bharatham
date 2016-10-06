@@ -5,6 +5,11 @@
 	border-radius: 0px;
 }
 
+.outset-nav {
+	left: -30px;
+    position: relative;
+}
+
 .title-navbar {
 	background-color: #4690e6;
 }
@@ -46,53 +51,22 @@
     box-shadow: none;
 }
 
-@media ( max-width : 650px) {
+@media ( max-width : 850px) {
 	.brand-logo {
 		display: none;
 	}
 }
 
-@media ( max-width : 800px) {
-	.navbar-header {
-		float: none;
-	}
-	.navbar-left, .navbar-right {
-		float: none !important;
-	}
-	.navbar-toggle {
-		display: block;
-	}
-	.navbar-fixed-top {
-		top: 0;
-		border-width: 0 0 1px;
-	}
-	.navbar-collapse.collapse {
-		display: none !important;
-	}
-	.navbar-nav {
-		float: none !important;
-		margin-top: 7.5px;
-	}
-	.navbar-nav>li {
-		float: none;
-	}
-	.navbar-nav>li>a {
-		padding-top: 10px;
-		padding-bottom: 10px;
-	}
-	.collapse.in {
-		display: block !important;
-	}
+@media (max-width : 768px) {
 	.secondary-navbar {
 		display: none;
 	}
+	
 	.mobile-navbar {
 		display: block;
 		background-color: #2766b5;
 	}
-	.title-nav.menu-bar-seperator {
-		border: none;
-	}
+	
 	.navbar-toggle {
 		background-color: #ddd;
 		border-color: #ddd;

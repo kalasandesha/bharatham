@@ -2,11 +2,6 @@
 	font-weight: bold;
 }
 
-.main-content {
-	margin-top: 20px;
-	width: 1024px;
-}
-
 .aboutus-submenu {
 	border-bottom: 2px solid #ffa781;
 }
@@ -20,20 +15,7 @@
 	height: 400px;
 }
 
-@media ( max-width : 1024px) {
-	.main-content {
-		width: 800px;
-	}
+.gurus-tab {
+	padding-top: 20px;
 }
 
-@media ( max-width : 800px) {
-	.main-content {
-		width: 600px;
-	}
-}
-
-@media ( max-width : 600px) {
-	.main-content {
-		width: 370px;
-	}
-}
