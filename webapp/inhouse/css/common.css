@@ -2,6 +2,15 @@
 	width: 1024px;
 }
 
+.image-wrapper>img {
+	width: 100%;
+	height: 400px;
+}
+
+.content-submenu-item.active {
+	font-weight: bold;
+}
+
 @media ( min-width : 1025px) {
 	.main-content {
 		width: 1000px;
