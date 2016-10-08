@@ -1,6 +1,6 @@
 define([ 'backbone', 'jquery', 'underscore', 'app/app',
 		'text!template/homepage.html', 'mustache', 'json!data/homepage.json' ], function(Backbone, $, _,
-		App, TemplateHomepage, Mustache, HomePageJson) {
+		App, TemplateHomePage, Mustache, HomePageJson) {
 
 	var NavbarView = Backbone.View.extend({
 
@@ -34,7 +34,7 @@ define([ 'backbone', 'jquery', 'underscore', 'app/app',
 
 			});
 			console.log(HomePageJson);
-			$(self.el).html(Mustache.render(TemplateHomepage, HomePageJson));
+			$(self.el).html(Mustache.render(TemplateHomePage, HomePageJson));
 		},
 
 	});
