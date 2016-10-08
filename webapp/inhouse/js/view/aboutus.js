@@ -20,7 +20,6 @@ define([ 'backbone', 'jquery', 'underscore', 'app/app',
 			$(".aboutus-submenu-item." + section + "-link").addClass("active");
 
 			$.when(App.getAboutUsSectionHtml(section)).done(function(html) {
-				console.log(html);
 				$(self.el).find(".aboutus-content-area").html(html);
 			}).fail(function() {
 				alert("Error while loading the content");
@@ -33,8 +32,9 @@ define([ 'backbone', 'jquery', 'underscore', 'app/app',
 		},
 		
 		displayGuru: function(guru) {
-			$.when(App.getOurGurusSectionHtml(guru)).done(function(html) {
-				$(self.el).find(".guru-content").html(html);
+			var self = this;
+			$.when(App.getOurGurusSectionHtml(guru)).done(function(htmlContent) {
+				$(self.el).find(".guru-content").html(htmlContent);
 			}).fail(function() {
 				alert("Error while loading the content");
 			});
