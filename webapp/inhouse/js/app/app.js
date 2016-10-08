@@ -26,7 +26,11 @@ define(
 					return this.getSectionHtml("webapp/inhouse/template/aboutus/ourgurus/" + section + ".html");
 				},
 				
-				getSectionHtml : function(section) {
+				getKalotthungaAwardeesHtml : function(year) {
+					return this.getSectionHtml("webapp/inhouse/template/kalotthunga/" + year + ".html");
+				},
+				
+				getSectionHtml : _.memoize(function(section) {
 					var self = this;
 					var defer = $.Deferred();
 					$.get({
@@ -40,7 +44,7 @@ define(
 						}
 					});
 					return defer;
-				}
+				})
 			};
 
 			App.getInstance = function() {
