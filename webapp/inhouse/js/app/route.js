@@ -7,7 +7,7 @@ define([ 'backbone', 'view/homepage', 'view/aboutus', 'view/kalotthunga',
 		routes : {
 			"aboutus/:submenu" : "aboutus",
 			"kalotthunga-awardees/:year" : "kalotthunga-awardees",
-			"festival/:festival" : "festival",
+			"festival/:festival/:year" : "festival",
 			"*actions" : "defaultRoute"
 		}
 
@@ -23,8 +23,8 @@ define([ 'backbone', 'view/homepage', 'view/aboutus', 'view/kalotthunga',
 		new Kalotthunga(year);
 	});
 
-	app_router.on('route:festival', function(festival) {
-		new Festival(festival);
+	app_router.on('route:festival', function(festival, year) {
+		new Festival(festival, year);
 	});
 
 	app_router.on('route:defaultRoute', function(actions) {

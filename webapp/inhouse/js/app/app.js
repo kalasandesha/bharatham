@@ -30,6 +30,14 @@ define(
 					return this.getSectionHtml("webapp/inhouse/template/kalotthunga/" + year + ".html");
 				},
 				
+				getFestivalHtml : function(festival) {
+					return this.getSectionHtml("webapp/inhouse/template/festivals/" + festival + ".html");
+				},
+				
+				getFestivalYearHtml : function(festival, year) {
+					return this.getSectionHtml("webapp/inhouse/template/festivals/" + festival + "/" + year + ".html");
+				},
+				
 				getSectionHtml : _.memoize(function(section) {
 					var self = this;
 					var defer = $.Deferred();
