@@ -1,0 +1,21 @@
+.aboutus-submenu-item.active {
+	font-weight: bold;
+}
+
+.aboutus-submenu {
+	border-bottom: 2px solid #ffa781;
+}
+
+.image-wrapper>img {
+	width: 100%;
+	height: 400px;
+}
+
+.guru-content {
+	height: 400px;
+}
+
+.gurus-tab {
+	padding-top: 20px;
+}
+
