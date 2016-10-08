@@ -1,0 +1,10 @@
+<div class="container-fluid main-content">
+	<h4>Image Gallery:</h4>
+	<div class="gallery-container submenu-content-area ">
+		{{#images}} 
+		<a href="{{imageLink}}" data-sub-html="<h4>{{imageCaptionHeading}}</h4><p>{{imageCaptionDescription}}</p>"> <img
+			src="{{imageThumbLink}}" />
+		</a>
+		{{/images}}
+	</div>
+</div>

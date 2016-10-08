@@ -17,10 +17,10 @@ define([ 'backbone', 'jquery', 'underscore', 'app/app',
 		render : function(section) {
 			var self = this;
 			$(self.el).html(Mustache.render(TemplateAboutUs, {}));
-			$(".aboutus-submenu-item." + section + "-link").addClass("active");
+			$(".content-submenu-item." + section + "-link").addClass("active");
 
 			$.when(App.getAboutUsSectionHtml(section)).done(function(html) {
-				$(self.el).find(".aboutus-content-area").html(html);
+				$(self.el).find(".submenu-content-area").html(html);
 			}).fail(function() {
 				alert("Error while loading the content");
 			});
