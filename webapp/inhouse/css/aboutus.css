@@ -2,10 +2,23 @@
 	border-bottom: 2px solid #ffa781;
 }
 
-.guru-content {
-	height: 400px;
-}
-
 .gurus-tab {
 	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.controls-row {
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.controls-row .input-group {
+	float: left;
+	padding: 2px;
+}
+
+@media ( max-width : 768px) {
+	.controls-row .input-group {
+		float: none;
+	}
 }

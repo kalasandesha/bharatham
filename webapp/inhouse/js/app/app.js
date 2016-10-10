@@ -52,7 +52,41 @@ define(
 						}
 					});
 					return defer;
-				})
+				}),
+				
+				subscribeEmail: function(email) {
+					return this.postDataToServer({
+						option: 'subscribeNewsLetter',
+						email: email
+					});
+				},
+				
+				contactUs: function(name, email, message) {
+					return this.postDataToServer({
+						option: 'contactUs',
+						email: email,
+						name: name,
+						message: message
+					});
+				},
+				
+				postDataToServer: function(data) {
+					var self = this;
+					var defer = $.Deferred();
+					$.ajax({
+						url: 'webapp/php/actions.php',
+						dataType: 'json',
+						data : data,
+						method: 'post',
+						success: function(data) {
+							defer.resolve(data);
+						},
+						error: function() {
+							defer.reject(arguments);
+						}
+					});
+					return defer;
+				}
 			};
 
 			App.getInstance = function() {
