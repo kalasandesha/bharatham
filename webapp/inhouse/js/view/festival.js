@@ -23,6 +23,7 @@ define([ 'backbone', 'jquery', 'underscore', 'app/app', 'mustache' ], function(
 					.done(
 							function(festivalHtml, yearHtml) {
 								$(self.el).html(festivalHtml);
+								$(".submenu-years [data-year='" + year + "']").addClass("active");
 								$(self.el).find('.submenu-content-area').html(
 										yearHtml);
 							}).fail(function() {

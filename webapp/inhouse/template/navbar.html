@@ -1,6 +1,5 @@
 <nav class="navbar navbar-default menu-bar-seperator title-navbar">
 	<div class="container-fluid main-content">
-		<!-- Brand and toggle get grouped for better mobile display -->
 		<div class="navbar-header">
 			<button type="button" class="navbar-toggle collapsed"
 				data-toggle="collapse" data-target=".menu-bar-items"
@@ -18,20 +17,15 @@
 		<div class="collapse navbar-collapse menu-bar-items">
 			<ul class="nav navbar-nav navbar-right">
 				<li><a class="menu-item" href="#">e-brochure</a></li>
-				<li><a class="menu-item" href="#">Subscribe for Newsletter</a></li>
+				<li><a class="menu-item subscribe-newsletter" href="javascript:void(0);">Subscribe for Newsletter</a></li>
 			</ul>
 		</div>
-		<!-- /.navbar-collapse -->
 	</div>
-	<!-- /.container-fluid -->
-
 </nav>
 <nav class="navbar navbar-default menu-bar-seperator secondary-navbar">
 	<div class="container-fluid main-content">
 		<div class="collapse navbar-collapse menu-bar-items">
 			<ul class="nav navbar-nav outset-nav">
-				<!-- 				<li><a class="menu-item" href="#"><span -->
-				<!-- 						class="glyphicon glyphicon-home"></span></a></li> -->
 				<li class="dropdown"><a href="#" class="dropdown-toggle"
 					data-toggle="dropdown" role="button" aria-haspopup="true"
 					aria-expanded="false">Festivals <span class="caret"></span></a>
@@ -39,27 +33,25 @@
 						<li><a href="#/festival/nruthyopasana/2016">Nruthyopasana</a></li>
 						<li><a href="#/festival/naada-yaana/2016">Naada Yaana</a></li>
 						<li><a href="#/festival/kalabhivardhana/2015">Kalabhivardhana</a></li>
-						<li><a href="#/festival/kishora-bharatha/2016">Kishora Bharatha</a></li>
+						<li><a href="#/festival/kishora-bharatha/2016">Kishora
+								Bharatha</a></li>
 					</ul></li>
-				<li><a class="menu-item" href="#/kalotthunga-awardees/2016">Kalotthunga awardees</a></li>
-				<li><a class="menu-item" href="#">Gallery</a></li>
+				<li><a class="menu-item" href="#/kalotthunga-awardees/2016">Kalotthunga
+						awardees</a></li>
+				<li><a class="menu-item" href="#/gallery">Gallery</a></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
-				<li><a class="menu-item" href="#">Get involved</a></li>
+				<li><a class="menu-item" href="#/getinvolved">Get involved</a></li>
 				<li><a class="menu-item" href="#">Social initiatives</a></li>
-				<li><a class="menu-item" href="#/aboutus/aboutus" >About Us</a></li>
+				<li><a class="menu-item" href="#/aboutus/aboutus">About Us</a></li>
 			</ul>
 		</div>
-		<!-- /.navbar-collapse -->
 	</div>
-	<!-- /.container-fluid -->
 </nav>
 <nav class="navbar-default menu-bar-seperator mobile-navbar">
 	<div class="container-fluid main-content">
 		<div class="collapse navbar-collapse menu-bar-items">
 			<ul class="nav navbar-nav">
-				<!-- 				<li><a class="menu-item" href="#"><span -->
-				<!-- 						class="glyphicon glyphicon-home"></span></a></li> -->
 				<li class="dropdown"><a href="#" class="dropdown-toggle"
 					data-toggle="dropdown" role="button" aria-haspopup="true"
 					aria-expanded="false">Festivals <span class="caret"></span></a>
@@ -67,18 +59,44 @@
 						<li><a href="#/festival/nruthyopasana/2016">Nruthyopasana</a></li>
 						<li><a href="#/festival/naada-yaana/2016">Naada Yaana</a></li>
 						<li><a href="#/festival/kalabhivardhana/2015">Kalabhivardhana</a></li>
-						<li><a href="#/festival/kishora-bharatha/2016">Kishora Bharatha</a></li>
+						<li><a href="#/festival/kishora-bharatha/2016">Kishora
+								Bharatha</a></li>
 					</ul></li>
-				<li><a class="menu-item" href="#/kalotthunga-awardees/2016">Kalotthunga awardees</a></li>
-				<li><a class="menu-item" href="#">Social initiatives</a></li>
+				<li><a class="menu-item" href="#/kalotthunga-awardees/2016">Kalotthunga
+						awardees</a></li>
+				<li><a class="menu-item" href="#/gallery">Gallery</a></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
-				<li><a class="menu-item" href="#">Get involved</a></li>
-				<li><a class="menu-item" href="#">Gallery</a></li>
-				<li><a class="menu-item" href="#/aboutus/aboutus" >About Us</a></li>
+				<li><a class="menu-item" href="#/getinvolved">Get involved</a></li>
+				<li><a class="menu-item" href="#">Social initiatives</a></li>
+				<li><a class="menu-item" href="#/aboutus/aboutus">About Us</a></li>
 			</ul>
 		</div>
-		<!-- /.navbar-collapse -->
 	</div>
-	<!-- /.container-fluid -->
 </nav>
+<div class="modal fade subscribe-newsletter-modal" tabindex="-1" role="dialog"
+	aria-labelledby="subscribe-newsletter">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"
+					aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4 class="modal-title" id="subscribe-newsletter">New message</h4>
+			</div>
+			<div class="modal-body">
+				<form>
+				<div class="input-group">
+					<span class="input-group-addon" id="subscribe-email-label">Email</span> <input type="email" class="form-control" id="subscribe-email"
+							aria-describedby="subscribe-email-label" required>
+					</div>
+				</form>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-primary subscribe-button disabled" disabled="disabled">Subscribe</button>
+			</div>
+		</div>
+	</div>
+</div>

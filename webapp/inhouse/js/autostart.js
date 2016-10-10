@@ -59,6 +59,9 @@ requirejs.config({
 		},
 		'cookie' : {
 			deps : [ 'jquery' ]
+		},
+		'lightgallery' : {
+			deps : [ 'jquery' ]
 		}
 	}
 });

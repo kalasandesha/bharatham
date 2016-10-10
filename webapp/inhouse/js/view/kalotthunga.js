@@ -16,14 +16,14 @@ define([ 'backbone', 'jquery', 'underscore', 'app/app',
 		render : function(year) {
 			var self = this;
 			$(self.el).html(Mustache.render(TemplateKalotthunga, {}));
-			$(".kalotthunga-years [data-year='" + year + "']").addClass("active");
+			$(".submenu-years [data-year='" + year + "']").addClass("active");
 			self.renderYear(year);
 		},
 		
 		renderYear: function(year) {
 			var self = this;
 			$.when(App.getKalotthungaAwardeesHtml(year)).done(function(html) {
-				$(self.el).find(".kalotthunga-content-area").html(html);
+				$(self.el).find(".submenu-content-area").html(html);
 			}).fail(function() {
 				alert("Error while loading the content");
 			});
