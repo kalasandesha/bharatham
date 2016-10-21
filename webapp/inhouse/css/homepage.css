@@ -15,3 +15,7 @@
 	margin-left: auto;
 	margin-right: auto;
 }
+
+.carousel-caption p {
+	font-size: 28px;
+}

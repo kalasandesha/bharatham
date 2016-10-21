@@ -1,18 +1,18 @@
 {
 	"carouselItems": [
 	           {
-	        	   "carouselCaption": "First Image",
-	        	   "carouselMessage": "first image in homepage",
+	        	   "carouselCaption": "",
+	        	   "carouselMessage": "To Create Better World For Artists",
 	        	   "carouselImage": "KPS_5833.JPG"
 	           },
 	           {
-	        	   "carouselCaption": "Second Image",
-	        	   "carouselMessage": "Second image in homepage",
+	        	   "carouselCaption": "",
+	        	   "carouselMessage": "To Create Better World For Artists",
 	        	   "carouselImage": "big.JPG"
 	           },
 	           {
-	        	   "carouselCaption": "Third Image",
-	        	   "carouselMessage": "Third image in homepage",
+	        	   "carouselCaption": "",
+	        	   "carouselMessage": "To Create Better World For Artists",
 	        	   "carouselImage": "KPS_5842.JPG"
 	           }
 	           ],
