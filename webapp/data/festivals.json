@@ -1,8 +1,8 @@
 {
-	festivals: [
+	"festivals": [
 	    {
-	    	festivalName: '',
-	    	imageFileName: '',
+	    	"festivalName": '',
+	    	"imageFileName": '',
 	    	eventDate: ''
 	    },
 	    {

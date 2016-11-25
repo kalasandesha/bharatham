@@ -35,8 +35,13 @@
 <div class="container-fluid main-content">
 	<div class="festivals-wrapper">
 		{{#festivals}}
-		<div class="festival">
-		</div>
+		<div class="festival"></div>
+		<nav aria-label="Festivals">
+			<ul class="pager">
+				<li class="previous"><a href="#"><span aria-hidden="true">&larr;</span></a></li>
+				<li class="next"><a href="#"><span aria-hidden="true">&rarr;</span></a></li>
+			</ul>
+		</nav>
 		{{/festivals}}
 	</div>
 </div>
