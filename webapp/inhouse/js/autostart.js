@@ -8,7 +8,7 @@ requirejs.config({
 		bootstrap : './bootstrap',
 		data: '../../data'
 	},
-	skim : {
+	shim : {
 		'bootstrap/affix' : {
 			deps : [ 'jquery' ],
 			exports : '$.fn.affix'

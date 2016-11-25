@@ -1,10 +1,10 @@
 <div class="container-fluid carousel-container">
-	<div id="myCarousel" class="carousel slide" data-ride="carousel">
+	<div id="homeCarousel" class="carousel slide" data-ride="carousel">
 		<!-- Indicators -->
 		<ol class="carousel-indicators">
 			{{#carouselIndexes}}
-			<li data-target="#myCarousel" class="{{cssClass}}" data-slide-to="{{index}}"></li>
-			{{/carouselIndexes}}
+			<li data-target="#homeCarousel" class="{{cssClass}}"
+				data-slide-to="{{index}}"></li> {{/carouselIndexes}}
 		</ol>
 
 		<!-- Wrapper for slides -->
@@ -22,10 +22,10 @@
 		</div>
 
 		<!-- Left and right controls -->
-		<a class="left carousel-control" href="#myCarousel" role="button"
+		<a class="left carousel-control" href="#homeCarousel" role="button"
 			data-slide="prev"> <span class="glyphicon glyphicon-chevron-left"
 			aria-hidden="true"></span> <span class="sr-only">Previous</span>
-		</a> <a class="right carousel-control" href="#myCarousel" role="button"
+		</a> <a class="right carousel-control" href="#homeCarousel" role="button"
 			data-slide="next"> <span
 			class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
 			<span class="sr-only">Next</span>
@@ -35,8 +35,13 @@
 <div class="container-fluid main-content">
 	<div class="festivals-wrapper">
 		{{#festivals}}
-		<div class="festival">
-		</div>
+		<div class="festival"></div>
+		<nav aria-label="Festivals">
+			<ul class="pager">
+				<li class="previous"><a href="#"><span aria-hidden="true">&larr;</span></a></li>
+				<li class="next"><a href="#"><span aria-hidden="true">&rarr;</span></a></li>
+			</ul>
+		</nav>
 		{{/festivals}}
 	</div>
 </div>

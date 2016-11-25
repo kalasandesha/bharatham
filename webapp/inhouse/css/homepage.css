@@ -1,5 +1,9 @@
 @CHARSET "UTF-8";
 
+.festivals-wrapper {
+	height: 400px;
+}
+
 .carousel {
 	width: 100%;
 	height: 600px;
@@ -14,4 +18,8 @@
 	height: 600px;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+.carousel-caption p {
+	font-size: 28px;
 }

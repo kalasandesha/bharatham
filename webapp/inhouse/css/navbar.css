@@ -7,11 +7,16 @@
 
 .outset-nav {
 	left: -30px;
-    position: relative;
+	position: relative;
+}
+
+.collapsed-festival-links {
+	color: #ffffff !important;
+	font-size: 18px;
 }
 
 .title-navbar {
-	background-color: #4690e6;
+	background-color: #4690e7;
 }
 
 .secondary-navbar {
@@ -27,18 +32,27 @@
 }
 
 .brand-logo>img {
-	width: 100px;
-	height: 100px;
+	position: absolute;
+	top: 0px;
 }
 
 .menu-bar-seperator {
-	border-bottom-color: #ffa781;
+	border-bottom-color: #ffa783;
 	border-bottom-style: solid;
-	border-bottom-width: 3px;
+	border-bottom-width: 2px;
 }
 
 .menu-item {
 	color: #ffffff !important;
+	font-size: 18px;
+}
+
+.dropdown-toggle.menu-item {
+	background-color: #2766b5 !important;
+}
+
+.menu-item.brand-name {
+	font-size: 24px;
 }
 
 .mobile-navbar {
@@ -46,27 +60,69 @@
 }
 
 .navbar-collapse {
-    border-top: 0px none transparent;
-    -webkit-box-shadow: none;
-    box-shadow: none;
+	border-top: 0px none transparent;
+	-webkit-box-shadow: none;
+	box-shadow: none;
 }
 
-@media ( max-width : 850px) {
+@media ( max-width : 960px) {
 	.brand-logo {
 		display: none;
 	}
 }
 
-@media (max-width : 768px) {
+@media ( max-width : 860px) {
 	.secondary-navbar {
 		display: none;
 	}
-	
 	.mobile-navbar {
 		display: block;
 		background-color: #2766b5;
 	}
-	
+	.navbar-toggle {
+		background-color: #ddd;
+		border-color: #ddd;
+	}
+	.navbar-header {
+		float: none;
+	}
+	.navbar-left, .navbar-right {
+		float: none !important;
+	}
+	.navbar-toggle {
+		display: block;
+	}
+	.navbar-fixed-top {
+		top: 0;
+		border-width: 0 0 1px;
+	}
+	.navbar-collapse.collapse {
+		display: none !important;
+	}
+	.navbar-nav {
+		float: none !important;
+		margin-top: 7.5px;
+	}
+	.navbar-nav>li {
+		float: none;
+	}
+	.navbar-nav>li>a {
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+	.collapse.in {
+		display: block !important;
+	}
+	.secondary-navbar {
+		display: none;
+	}
+	.mobile-navbar {
+		display: block;
+		background-color: #2766b5;
+	}
+	.title-nav.menu-bar-seperator {
+		border: none;
+	}
 	.navbar-toggle {
 		background-color: #ddd;
 		border-color: #ddd;

@@ -1,3 +1,12 @@
+@font-face {
+    font-family: RawengulkBold;
+    src: url(../../third-party/fonts/RawengulkBold.otf);
+}
+
+* {
+	font-family: RawengulkBold;
+}
+
 .main-content {
 	width: 1024px;
 }
