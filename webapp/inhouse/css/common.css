@@ -1,10 +1,15 @@
+.registered-symbol {
+	top: -10px;
+	font-size: small;
+}
+
 @font-face {
-    font-family: RawengulkBold;
-    src: url(../../third-party/fonts/RawengulkBold.otf);
+	font-family: FontAwesome;
+	src: url(../../third-party/fonts/FontAwesome.otf);
 }
 
 * {
-	font-family: RawengulkBold;
+	font-family: FontAwesome;
 }
 
 .main-content {

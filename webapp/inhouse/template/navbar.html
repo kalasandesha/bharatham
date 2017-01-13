@@ -11,13 +11,16 @@
 			<a class="navbar-brand brand-logo" href="#"><img alt="KSP logo"
 				src="webapp/images/logos/logo.png"></a> <a
 				class="navbar-brand menu-item brand-name" href="#">Kala Sandesha
-				Prathishtana</a>
+				Prathishtana<span
+				class="glyphicon glyphicon-registration-mark registered-symbol"></span>
+			</a>
 		</div>
 
 		<div class="collapse navbar-collapse menu-bar-items">
 			<ul class="nav navbar-nav navbar-right">
 				<li><a class="menu-item" href="#">e-brochure</a></li>
-				<li><a class="menu-item subscribe-newsletter" href="javascript:void(0);">Subscribe for Newsletter</a></li>
+				<li><a class="menu-item subscribe-newsletter"
+					href="javascript:void(0);">Subscribe for Newsletter</a></li>
 			</ul>
 		</div>
 	</div>
@@ -26,15 +29,25 @@
 	<div class="container-fluid main-content">
 		<div class="collapse navbar-collapse menu-bar-items">
 			<ul class="nav navbar-nav outset-nav">
-				<li class="dropdown"><a href="#" class="dropdown-toggle menu-item"
-					data-toggle="dropdown" role="button" aria-haspopup="true"
-					aria-expanded="false">Festivals <span class="caret"></span></a>
-					<ul class="dropdown-menu">
-						<li><a href="#/festival/nruthyopasana/2016">Nruthyopasana</a></li>
-						<li><a href="#/festival/naada-yaana/2016">Naada Yaana</a></li>
-						<li><a href="#/festival/kalabhivardhana/2015">Kalabhivardhana</a></li>
-						<li><a href="#/festival/kishora-bharatha/2016">Kishora
-								Bharatha</a></li>
+				<li class="dropdown"><a href="#"
+					class="dropdown-toggle menu-item" data-toggle="dropdown"
+					role="button" aria-haspopup="true" aria-expanded="false">Festivals
+						<span class="caret"></span>
+				</a>
+					<ul class="dropdown-menu" role="menu">
+						<li class="dropdown-submenu"><a tabindex="-1"
+							href="javascript:void(0)">KSP Festivals</a>
+							<ul class="dropdown-menu">
+								<li><a href="#/festival/nruthyopasana/2016">Nruthyopasana</a></li>
+								<li><a href="#/festival/kalabhivardhana/2015">Kalabhivardhana</a></li>
+							</ul></li>
+						<li class="dropdown-submenu"><a tabindex="-1"
+							href="javascript:void(0)">MOU Festivals</a>
+							<ul class="dropdown-menu">
+								<li><a href="#/festival/naada-yaana/2016">Naada Yaana</a></li>
+								<li><a href="#/festival/kishora-bharatha/2016">Kishora
+										Bharatha</a></li>
+							</ul></li>
 					</ul></li>
 				<li><a class="menu-item" href="#/kalotthunga-awardees/2016">Kalotthunga
 						awardees</a></li>
@@ -52,15 +65,25 @@
 	<div class="container-fluid main-content">
 		<div class="collapse navbar-collapse menu-bar-items">
 			<ul class="nav navbar-nav">
-				<li class="dropdown"><a href="#" class="dropdown-toggle menu-item"
-					data-toggle="dropdown" role="button" aria-haspopup="true"
-					aria-expanded="false">Festivals <span class="caret"></span></a>
+				<li class="dropdown"><a href="#"
+					class="dropdown-toggle menu-item" data-toggle="dropdown"
+					role="button" aria-haspopup="true" aria-expanded="false">Festivals
+						<span class="caret"></span>
+				</a>
 					<ul class="dropdown-menu">
-						<li><a class="collapsed-festival-links" href="#/festival/nruthyopasana/2016">Nruthyopasana</a></li>
-						<li><a class="collapsed-festival-links" href="#/festival/naada-yaana/2016">Naada Yaana</a></li>
-						<li><a class="collapsed-festival-links" href="#/festival/kalabhivardhana/2015">Kalabhivardhana</a></li>
-						<li><a class="collapsed-festival-links" href="#/festival/kishora-bharatha/2016">Kishora
-								Bharatha</a></li>
+						<li class="dropdown-submenu"><a class="collapsed-festival-links" tabindex="-1"
+							href="javascript:void(0)">KSP Festivals</a>
+							<ul class="dropdown-menu">
+								<li><a class="collapsed-festival-sublinks" href="#/festival/nruthyopasana/2016">Nruthyopasana</a></li>
+								<li><a class="collapsed-festival-sublinks" href="#/festival/kalabhivardhana/2015">Kalabhivardhana</a></li>
+							</ul></li>
+						<li class="dropdown-submenu"><a class="collapsed-festival-links" tabindex="-1"
+							href="javascript:void(0)">MOU Festivals</a>
+							<ul class="dropdown-menu">
+								<li><a class="collapsed-festival-sublinks" href="#/festival/naada-yaana/2016">Naada Yaana</a></li>
+								<li><a class="collapsed-festival-sublinks" href="#/festival/kishora-bharatha/2016">Kishora
+										Bharatha</a></li>
+							</ul></li>
 					</ul></li>
 				<li><a class="menu-item" href="#/kalotthunga-awardees/2016">Kalotthunga
 						awardees</a></li>
@@ -68,14 +91,15 @@
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
 				<li><a class="menu-item" href="#/gallery">Gallery</a></li>
-				<li><a class="menu-item" href="#">Social initiatives</a></li>
+				<li><a class="menu-item" href="#/social/awarness">Social
+						initiatives</a></li>
 				<li><a class="menu-item" href="#/aboutus/aboutus">About Us</a></li>
 			</ul>
 		</div>
 	</div>
 </nav>
-<div class="modal fade subscribe-newsletter-modal" tabindex="-1" role="dialog"
-	aria-labelledby="subscribe-newsletter">
+<div class="modal fade subscribe-newsletter-modal" tabindex="-1"
+	role="dialog" aria-labelledby="subscribe-newsletter">
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
@@ -87,15 +111,18 @@
 			</div>
 			<div class="modal-body">
 				<form>
-				<div class="input-group">
-					<span class="input-group-addon" id="subscribe-email-label">Email</span> <input type="email" class="form-control" id="subscribe-email"
+					<div class="input-group">
+						<span class="input-group-addon" id="subscribe-email-label">Email</span>
+						<input type="email" class="form-control" id="subscribe-email"
 							aria-describedby="subscribe-email-label" required>
 					</div>
 				</form>
 			</div>
 			<div class="modal-footer">
 				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-				<button type="button" class="btn btn-primary subscribe-button disabled" disabled="disabled">Subscribe</button>
+				<button type="button"
+					class="btn btn-primary subscribe-button disabled"
+					disabled="disabled">Subscribe</button>
 			</div>
 		</div>
 	</div>
