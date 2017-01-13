@@ -1,0 +1,16 @@
+<div class="container-fluid main-content">
+	<div class="row">
+		{{#events}}
+		<div class="col-md-3 calendar-card-wrapper ">
+			<div class="flip calendar-card">
+				<div class="front">
+					{{name}}
+				</div>
+				<div class="back">
+					{{description}}
+				</div>
+			</div>
+		</div>
+		{{/events}}
+	</div>
+</div>
