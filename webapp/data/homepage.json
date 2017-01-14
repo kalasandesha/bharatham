@@ -1,20 +1,20 @@
 {
 	"carouselItems": [
-	           {
-	        	   "carouselCaption": "",
-	        	   "carouselMessage": "To Create Better World For Artists",
-	        	   "carouselImage": "KPS_5833.JPG"
-	           },
-	           {
-	        	   "carouselCaption": "",
-	        	   "carouselMessage": "To Create Better World For Artists",
-	        	   "carouselImage": "big.JPG"
-	           },
-	           {
-	        	   "carouselCaption": "",
-	        	   "carouselMessage": "To Create Better World For Artists",
-	        	   "carouselImage": "KPS_5842.JPG"
-	           }
-	           ],
-	           "_comment" : "Place the images under webapp/images/homepage and use the image names for carouselImage option"
+		{
+			"carouselCaption": "",
+			"carouselMessage": "To Create Better World For Artists",
+			"carouselImage": "1.JPG"
+		},
+		{
+			"carouselCaption": "",
+			"carouselMessage": "To Create Better World For Artists",
+			"carouselImage": "2.JPG"
+		},
+		{
+			"carouselCaption": "",
+			"carouselMessage": "To Create Better World For Artists",
+			"carouselImage": "3.JPG"
+		}
+	],
+	"_comment": "Place the images under webapp/images/homepage and use the image names for carouselImage option"
 }
