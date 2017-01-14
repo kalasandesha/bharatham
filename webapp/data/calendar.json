@@ -2,8 +2,8 @@
 	"events": [
 	    {
 	    	"name": "Nruthyopasana",
-	    	"year": 2017,
-	    	"month": 1,
+	    	"year": 2010,
+	    	"month": 3,
 	    	"description": "First Month",
 	    	"photo": "webapp/images/teammembers/4.jpg"
 	    },
@@ -30,7 +30,7 @@
 	    },
 	    {
 	    	"name": "Karavali Koushalam",
-	    	"year": 2017,
+	    	"year": 2022,
 	    	"month": 5,
 	    	"description": "Fifth Month",
 	    	"photo": "webapp/images/teammembers/4.jpg"

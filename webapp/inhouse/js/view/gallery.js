@@ -17,7 +17,7 @@ define([ 'backbone', 'jquery', 'underscore', 'app/app',
 		render : function() {
 			var self = this;
 			$(self.el).html(Mustache.render(TemplateGallery, GalleryJson));
-			$('.gallery-container').lightGallery({
+			$('[data-gallery-name]').lightGallery({
 			    subHtmlSelectorRelative: false
 			});
 		},

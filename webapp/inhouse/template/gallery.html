@@ -1,10 +1,15 @@
-<div class="container-fluid main-content">
-	<h4>Image Gallery:</h4>
-	<div class="gallery-container submenu-content-area ">
-		{{#images}} 
-		<a href="{{imageLink}}" data-sub-html="<h4>{{imageCaptionHeading}}</h4><p>{{imageCaptionDescription}}</p>"> <img
-			src="{{imageThumbLink}}" />
-		</a>
-		{{/images}}
+<div class="container-fluid main-content logo-filler">
+	<div class="h4">Gallery</div>
+	{{#imageGroup}}
+	<div class="gallery-group row">
+		<div class="gallery-name">{{groupName}}</div>
+		<div class="gallery-description">{{groupDescription}}</div>
+		<div class="submenu-content-area" data-gallery-name="{{groupName}}">
+			{{#images}} <a href="{{imageLink}}"
+				data-sub-html="<h4>{{imageCaptionHeading}}</h4><p>{{imageCaptionDescription}}</p>">
+				<img src="{{imageThumbLink}}" />
+			</a> {{/images}}
+		</div>
 	</div>
+	{{/imageGroup}}
 </div>

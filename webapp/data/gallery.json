@@ -1,22 +1,58 @@
 {
-	"images": [
+	"imageGroup": [
 		{
-			"imageLink": "webapp/images/homepage/1.jpg",
-			"imageCaptionHeading": "Test 1",
-			"imageCaptionDescription": "Test description 1",
-			"imageThumbLink": "webapp/images/homepage/thumbnails/tn_1.jpg"
+			"groupName": "Team Members",
+			"groupDescription": "This folder contains the images of the team members of KSP.",
+			"images": [
+				{
+					"imageLink": "webapp/images/teammembers/1.jpg",
+					"imageCaptionHeading": "Test 1",
+					"imageCaptionDescription": "Test description 1",
+					"imageThumbLink": "webapp/images/teammembers/thumbnails/tn_1.jpg"
+				},
+				{
+					"imageLink": "webapp/images/teammembers/2.jpg",
+					"imageCaptionHeading": "Test 2",
+					"imageCaptionDescription": "Test description 2",
+					"imageThumbLink": "webapp/images/teammembers/thumbnails/tn_2.jpg"
+				},
+				{
+					"imageLink": "webapp/images/teammembers/3.jpg",
+					"imageCaptionHeading": "Test 3",
+					"imageCaptionDescription": "Test description 3",
+					"imageThumbLink": "webapp/images/teammembers/thumbnails/tn_3.jpg"
+				},
+				{
+					"imageLink": "webapp/images/teammembers/4.jpg",
+					"imageCaptionHeading": "Test 4",
+					"imageCaptionDescription": "Test description 4",
+					"imageThumbLink": "webapp/images/teammembers/thumbnails/tn_4.jpg"
+				}
+			]
 		},
 		{
-			"imageLink": "webapp/images/homepage/2.jpg",
-			"imageCaptionHeading": "Test 2",
-			"imageCaptionDescription": "Test description 2",
-			"imageThumbLink": "webapp/images/homepage/thumbnails/tn_2.jpg"
-		},
-		{
-			"imageLink": "webapp/images/homepage/3.jpg",
-			"imageCaptionHeading": "Test 3",
-			"imageCaptionDescription": "Test description 3",
-			"imageThumbLink": "webapp/images/homepage/thumbnails/tn_3.jpg"
+			"groupName": "Home page Pics",
+			"groupDescription": "This folder contains the Home page pics",
+			"images": [
+				{
+					"imageLink": "webapp/images/homepage/1.jpg",
+					"imageCaptionHeading": "Test 1",
+					"imageCaptionDescription": "Test description 1",
+					"imageThumbLink": "webapp/images/homepage/thumbnails/tn_1.jpg"
+				},
+				{
+					"imageLink": "webapp/images/homepage/2.jpg",
+					"imageCaptionHeading": "Test 2",
+					"imageCaptionDescription": "Test description 2",
+					"imageThumbLink": "webapp/images/homepage/thumbnails/tn_2.jpg"
+				},
+				{
+					"imageLink": "webapp/images/homepage/3.jpg",
+					"imageCaptionHeading": "Test 3",
+					"imageCaptionDescription": "Test description 3",
+					"imageThumbLink": "webapp/images/homepage/thumbnails/tn_3.jpg"
+				}
+			]
 		}
 	]
 }
