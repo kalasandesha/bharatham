@@ -2,13 +2,12 @@ define([ 'backbone', 'jquery', 'underscore', 'app/app',
 		'text!template/aboutus.html', 'mustache' ], function(Backbone, $, _,
 		App, TemplateAboutUs, Mustache) {
 
-	var NavbarView = Backbone.View.extend({
+	var AboutUsView = Backbone.View.extend({
 
 		el : '#content-wrapper',
 
 		events : {
-			'click .guru-link' : 'changeGuruSection',
-			'click #contact-submit' : 'submitContactUs'
+			'click .guru-link' : 'changeGuruSection'
 		},
 
 		initialize : function(section) {
@@ -48,25 +47,9 @@ define([ 'backbone', 'jquery', 'underscore', 'app/app',
 					"active");
 			$(ev.currentTarget).parent().addClass("active");
 			self.displayGuru($(ev.currentTarget).data("guruName"));
-		},
-
-		submitContactUs : function() {
-			var self = this;
-			var $el = $(self.el);
-			var $name = $el.find("#contactus-name");
-			var $email = $el.find("#contactus-email");
-			var $message = $el.find("#contactus-message");
-			$.when(App.contactUs($name.val(), $email.val(), $message.val()))
-					.done(function(result) {
-						$name.val("");
-						$email.val("");
-						$message.val("");
-					}).fail(function() {
-						alert('Data save failed');
-					});
 		}
 
 	});
 
-	return NavbarView;
+	return AboutUsView;
 });

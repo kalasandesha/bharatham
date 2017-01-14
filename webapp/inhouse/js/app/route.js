@@ -1,6 +1,6 @@
 define([ 'backbone', 'view/homepage', 'view/aboutus', 'view/kalotthunga',
-		'view/festival', 'view/gallery', 'view/getinvolved', 'view/calendar', 'view/socialinitiatives' ], function(Backbone, HomePage, AboutUs, Kalotthunga,
-		Festival, Gallery, GetInvolved, Calendar, SocialInitiatives) {
+		'view/festival', 'view/gallery', 'view/getinvolved', 'view/calendar', 'view/socialinitiatives', 'view/contactus' ], function(Backbone, HomePage, AboutUs, Kalotthunga,
+		Festival, Gallery, GetInvolved, Calendar, SocialInitiatives, ContactUs) {
 
 	var AppRouter = Backbone.Router.extend({
 
@@ -12,6 +12,7 @@ define([ 'backbone', 'view/homepage', 'view/aboutus', 'view/kalotthunga',
 			"gallery": "gallery",
 			"getinvolved": "getinvolved",
 			"socialinitiatives/:section": "social",
+			"contactus": "contact",
 			"*actions" : "defaultRoute"
 		}
 
@@ -45,6 +46,10 @@ define([ 'backbone', 'view/homepage', 'view/aboutus', 'view/kalotthunga',
 
 	app_router.on('route:social', function(section) {
 		new SocialInitiatives(section);
+	});
+	
+	app_router.on('route:contact', function() {
+		new ContactUs();
 	});
 	
 	app_router.on('route:defaultRoute', function(actions) {

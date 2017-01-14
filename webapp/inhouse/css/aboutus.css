@@ -46,7 +46,7 @@
 	font-weight: bold;
 }
 
-.team-member:nth-child(odd) .team-member-photo {
+.team-member:nth-child(odd) .team-member-photo, .our-guru-photo{
 	float: right;
     margin: 15px;
     border: 0;

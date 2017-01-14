@@ -1,13 +1,14 @@
 define([ 'backbone', 'jquery', 'underscore', 'app/app',
-		'text!template/homepage.html', 'mustache', 'json!data/homepage.json', 'bootstrap/carousel' ], function(Backbone, $, _,
-		App, TemplateHomePage, Mustache, HomePageJson, Carousel) {
+		'text!template/homepage.html', 'mustache', 'json!data/homepage.json',
+		'slick' ], function(Backbone, $, _, App, TemplateHomePage, Mustache,
+		HomePageJson, Slick) {
 
 	var HomePageView = Backbone.View.extend({
 
 		el : '#content-wrapper',
-		
+
 		events : {
-			
+
 		},
 
 		initialize : function() {
@@ -16,29 +17,16 @@ define([ 'backbone', 'jquery', 'underscore', 'app/app',
 
 		render : function() {
 			var self = this;
-			HomePageJson.carouselIndexes = [];
-			_.each(HomePageJson.carouselItems, function(element, index){
-				if(index == 0) {
-					element.cssClass = "active";
-					HomePageJson.carouselIndexes.push({
-						"index": index + 1,
-						"cssClass": "active"
-						});
-				} else {
-					element.cssClass = "";
-					HomePageJson.carouselIndexes.push({
-						"index": index + 1,
-						"cssClass": ""
-						});
-				}
-
-			});
 			$(self.el).html(Mustache.render(TemplateHomePage, HomePageJson));
-//			$(self.el).find('.carousel').carousel({
-//				interval: 5000,
-//				pause: null
-//	        }).carousel('cycle');
-			//$(self.el).find('.carousel').carousel('cycle');
+			$('.slick-container').slick({
+				dots : true,
+				infinite : true,
+				speed : 500,
+				fade : true,
+				cssEase : 'linear',
+				autoplay : true,
+				autoplaySpeed : 2000
+			});
 		},
 
 	});
