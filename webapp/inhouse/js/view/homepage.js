@@ -23,9 +23,11 @@ define([ 'backbone', 'jquery', 'underscore', 'app/app',
 				infinite : true,
 				speed : 500,
 				fade : true,
-				cssEase : 'linear',
+				cssEase : 'ease-in-out',
 				autoplay : true,
-				autoplaySpeed : 2000
+				autoplaySpeed : 2000,
+				pauseOnHover: false,
+				pauseOnFocus: false
 			});
 		},
 
