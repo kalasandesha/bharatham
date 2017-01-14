@@ -9,7 +9,8 @@ define([ 'backbone', 'jquery', 'underscore', 'app/app',
 		events : {
 			'click .subscribe-newsletter' : 'showSubscribeModal',
 			'click .subscribe-button' : 'subscribeNewsLetter',
-			'keydown #subscribe-email' : 'checkValidity'
+			'keydown #subscribe-email' : 'checkValidity',
+			'click .menu-item' : 'setActive'
 		},
 
 		initialize : function() {
@@ -43,14 +44,18 @@ define([ 'backbone', 'jquery', 'underscore', 'app/app',
 		
 		checkValidity: _.debounce(function(ev) {
 			var self = this;
-			console.log($(ev.currentTarget)[0].checkValidity());
-			console.log($(ev.currentTarget).val());
 			if($(ev.currentTarget)[0].checkValidity()) {
 				$(this.modal).find('.subscribe-button').removeClass('disabled').removeAttr('disabled');
 			} else {
 				$(this.modal).find('.subscribe-button').addClass('disabled').attr('disabled','disabled');
 			}
-		}, 200)
+		}, 200),
+		
+		setActive: function(ev) {
+			var self = this;
+			$(self.el).find('.menu-item.active').removeClass('active');
+			$(ev.currentTarget).addClass('active');
+		}
 		
 	});
 

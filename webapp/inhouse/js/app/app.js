@@ -38,6 +38,10 @@ define(
 					return this.getSectionHtml("webapp/inhouse/template/festivals/" + festival + "/" + year + ".html");
 				},
 				
+				getSocialInitiativesSectionHtml : function(section) {
+					return this.getSectionHtml("webapp/inhouse/template/socialinitiatives/" + section + "-content.html");
+				},
+				
 				getSectionHtml : _.memoize(function(section) {
 					var self = this;
 					var defer = $.Deferred();
