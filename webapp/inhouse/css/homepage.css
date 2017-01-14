@@ -4,6 +4,16 @@
 	height: 400px;
 }
 
+.slick-prev {
+	left: 5%;
+	z-index: 1050;
+}
+
+.slick-next {
+	right: 5%;
+	z-index: 1050;
+}
+
 .slick-image {
 	width: 100%;
 }
