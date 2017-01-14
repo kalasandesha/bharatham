@@ -4,31 +4,36 @@
 	    	"name": "Nruthyopasana",
 	    	"year": 2017,
 	    	"month": 1,
-	    	"description": "First Month"
+	    	"description": "First Month",
+	    	"photo": "webapp/images/teammembers/4.jpg"
 	    },
 	    {
 	    	"name": "TBD",
 	    	"year": 2017,
 	    	"month": 2,
-	    	"description": "Second Month"
+	    	"description": "Second Month",
+	    	"photo": "webapp/images/teammembers/1.jpg"
 	    },
 	    {
 	    	"name": "Geetharnava",
 	    	"year": 2017,
 	    	"month": 3,
-	    	"description": "Third Month"
+	    	"description": "Third Month",
+	    	"photo": "webapp/images/teammembers/2.jpg"
 	    },
 	    {
 	    	"name": "Nada Yana",
 	    	"year": 2017,
 	    	"month": 4,
-	    	"description": "Forth Month"
+	    	"description": "Forth Month",
+	    	"photo": "webapp/images/teammembers/3.jpg"
 	    },
 	    {
 	    	"name": "Karavali Koushalam",
 	    	"year": 2017,
 	    	"month": 5,
-	    	"description": "Fifth Month"
+	    	"description": "Fifth Month",
+	    	"photo": "webapp/images/teammembers/4.jpg"
 	    }
 	],
 	"_comment": "Add details to events to populate the calendar"

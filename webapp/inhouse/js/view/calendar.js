@@ -1,5 +1,5 @@
 define([ 'backbone', 'jquery', 'underscore', 'app/app',
-		'text!template/calendar.html','text!template/calendar-wrapper.html', 'mustache', 'json!data/calendar.json', 'jQuery.flip' ], function(Backbone, $, _,
+		'text!template/calendar.html','text!template/calendar-wrapper.html', 'mustache', 'json!data/calendar.json', 'jquery.flip' ], function(Backbone, $, _,
 		App, TemplateCalendar, TemplateCalendarWrapper, Mustache, Data, Flip) {
 
 	var CalendarView = Backbone.View.extend({

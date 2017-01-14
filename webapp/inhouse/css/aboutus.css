@@ -35,5 +35,35 @@
 }
 
 .address {
-	margin: 20px;
+	padding: 20px;
+}
+
+.team-member {
+	padding: 10px;
+}
+
+.team-member-name {
+	font-weight: bold;
+}
+
+.team-member:nth-child(odd) .team-member-photo {
+	float: right;
+    margin: 15px;
+    border: 0;
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+.team-member:nth-child(odd) {
+	background-color: #f9f9f9;
+}
+
+.team-member:nth-child(even) .team-member-photo {
+	float: left;
+    margin: 15px;
+    border: 0;
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
 }
