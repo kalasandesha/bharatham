@@ -4,6 +4,10 @@
 	height: 400px;
 }
 
+.slick-container {
+	padding: 0px;
+}
+
 .slick-prev {
 	left: 5%;
 	z-index: 1050;

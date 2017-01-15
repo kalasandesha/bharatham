@@ -90,6 +90,24 @@ define(
 						}
 					});
 					return defer;
+				},
+				
+				getAdminData: function(passcode) {
+					var self = this;
+					return self.postDataToServer({
+						option: 'adminSection',
+						key: passcode
+					});
+				},
+				
+				updateQueries: function(passcode, reviewed, unreviewed) {
+					var self = this;
+					return self.postDataToServer({
+						option: 'adminSectionUpdate',
+						reviewed: reviewed,
+						unreviewed: unreviewed,
+						key: passcode
+					});
 				}
 			};
 

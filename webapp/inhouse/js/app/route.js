@@ -1,6 +1,8 @@
 define([ 'backbone', 'view/homepage', 'view/aboutus', 'view/kalotthunga',
-		'view/festival', 'view/gallery', 'view/getinvolved', 'view/calendar', 'view/socialinitiatives', 'view/contactus' ], function(Backbone, HomePage, AboutUs, Kalotthunga,
-		Festival, Gallery, GetInvolved, Calendar, SocialInitiatives, ContactUs) {
+		'view/festival', 'view/gallery', 'view/getinvolved', 'view/calendar',
+		'view/socialinitiatives', 'view/contactus', 'view/admin' ], function(Backbone,
+		HomePage, AboutUs, Kalotthunga, Festival, Gallery, GetInvolved,
+		Calendar, SocialInitiatives, ContactUs, Admin) {
 
 	var AppRouter = Backbone.Router.extend({
 
@@ -9,10 +11,11 @@ define([ 'backbone', 'view/homepage', 'view/aboutus', 'view/kalotthunga',
 			"aboutus/:submenu" : "aboutus",
 			"kalotthunga-awardees/:year" : "kalotthunga-awardees",
 			"festival/:festival/:year" : "festival",
-			"gallery": "gallery",
-			"getinvolved": "getinvolved",
-			"socialinitiatives/:section": "social",
-			"contactus": "contact",
+			"gallery" : "gallery",
+			"getinvolved" : "getinvolved",
+			"socialinitiatives/:section" : "social",
+			"contactus" : "contact",
+			"admin" : "admin",
 			"*actions" : "defaultRoute"
 		}
 
@@ -23,7 +26,7 @@ define([ 'backbone', 'view/homepage', 'view/aboutus', 'view/kalotthunga',
 	app_router.on('route:calendar', function() {
 		new Calendar();
 	});
-	
+
 	app_router.on('route:aboutus', function(submenu) {
 		new AboutUs(submenu);
 	});
@@ -35,11 +38,11 @@ define([ 'backbone', 'view/homepage', 'view/aboutus', 'view/kalotthunga',
 	app_router.on('route:festival', function(festival, year) {
 		new Festival(festival, year);
 	});
-	
+
 	app_router.on('route:gallery', function() {
 		new Gallery();
 	});
-	
+
 	app_router.on('route:getinvolved', function() {
 		new GetInvolved();
 	});
@@ -47,11 +50,15 @@ define([ 'backbone', 'view/homepage', 'view/aboutus', 'view/kalotthunga',
 	app_router.on('route:social', function(section) {
 		new SocialInitiatives(section);
 	});
-	
+
 	app_router.on('route:contact', function() {
 		new ContactUs();
 	});
-	
+
+	app_router.on('route:admin', function() {
+		new Admin();
+	});
+
 	app_router.on('route:defaultRoute', function(actions) {
 		new HomePage();
 	});
