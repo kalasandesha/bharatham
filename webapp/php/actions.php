@@ -77,7 +77,6 @@ try {
 		$result ['success'] = true;
 		$result ['message'] = "Mailing list retrieved ";
 		echo json_encode ( $result );
-		
 	} elseif ($option == 'adminSectionUpdate') {
 		
 		if (! isset ( $_POST ['key'] )) {
@@ -92,13 +91,9 @@ try {
 		
 		if (isset ( $_POST ['reviewed'] )) {
 			
-			$stmt1 = $pdo->prepare ( 'UPDATE queries SET reviewed = 1 WHERE id = ?' );
-			$stmt2 = $pdo->prepare ( 'UPDATE queries SET reviewed_date = now() WHERE id = ?' );
+			$stmt = $pdo->prepare ( 'UPDATE queries SET reviewed = 1, reviewed_date = now() WHERE id = ?' );
 			foreach ( $_POST ['reviewed'] as $id ) {
-				$stmt1->execute ( [ 
-						$id 
-				] );
-				$stmt2->execute ( [ 
+				$stmt->execute ( [ 
 						$id 
 				] );
 			}
@@ -106,13 +101,9 @@ try {
 		
 		if (isset ( $_POST ['unreviewed'] )) {
 			
-			$stmt1 = $pdo->prepare ( 'UPDATE queries SET reviewed = 0 WHERE id = ?' );
-			$stmt2 = $pdo->prepare ( 'UPDATE queries SET reviewed_date = null WHERE id = ?' );
+			$stmt = $pdo->prepare ( 'UPDATE queries SET reviewed = 0, reviewed_date = null WHERE id = ?' );
 			foreach ( $_POST ['unreviewed'] as $id ) {
-				$stmt1->execute ( [ 
-						$id 
-				] );
-				$stmt2->execute ( [ 
+				$stmt->execute ( [ 
 						$id 
 				] );
 			}
