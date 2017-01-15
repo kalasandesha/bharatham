@@ -5,6 +5,10 @@
 	border-radius: 0px;
 }
 
+.active {
+	font-weight: bold;
+}
+
 .outset-nav {
 	left: -30px;
 	position: relative;

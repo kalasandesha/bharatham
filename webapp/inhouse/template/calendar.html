@@ -3,10 +3,11 @@
 		{{#events}}
 		<div class="col-md-3 calendar-card-wrapper ">
 			<div class="flip calendar-card">
-				<div class="front">
-					{{name}}
+				<div class="front" style="background-image: url('{{photo}}')">
+					<img class="calendar-image" src="{{photo}}" />
+					<div class="calender-caption">{{name}}</div>
 				</div>
-				<div class="back">
+				<div class="back calender-back-caption">
 					{{description}}
 				</div>
 			</div>

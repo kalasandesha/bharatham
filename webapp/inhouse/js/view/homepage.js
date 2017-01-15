@@ -1,13 +1,14 @@
 define([ 'backbone', 'jquery', 'underscore', 'app/app',
-		'text!template/homepage.html', 'mustache', 'json!data/homepage.json' ], function(Backbone, $, _,
-		App, TemplateHomePage, Mustache, HomePageJson) {
+		'text!template/homepage.html', 'mustache', 'json!data/homepage.json',
+		'slick' ], function(Backbone, $, _, App, TemplateHomePage, Mustache,
+		HomePageJson, Slick) {
 
 	var HomePageView = Backbone.View.extend({
 
 		el : '#content-wrapper',
-		
+
 		events : {
-			
+
 		},
 
 		initialize : function() {
@@ -16,24 +17,18 @@ define([ 'backbone', 'jquery', 'underscore', 'app/app',
 
 		render : function() {
 			var self = this;
-			HomePageJson.carouselIndexes = [];
-			_.each(HomePageJson.carouselItems, function(element, index){
-				if(index == 0) {
-					element.cssClass = "active";
-					HomePageJson.carouselIndexes.push({
-						"index": index + 1,
-						"cssClass": "active"
-						});
-				} else {
-					element.cssClass = "";
-					HomePageJson.carouselIndexes.push({
-						"index": index + 1,
-						"cssClass": ""
-						});
-				}
-
-			});
 			$(self.el).html(Mustache.render(TemplateHomePage, HomePageJson));
+			$('.slick-container').slick({
+				dots : true,
+				infinite : true,
+				speed : 500,
+				fade : true,
+				cssEase : 'ease-in-out',
+				autoplay : true,
+				autoplaySpeed : 2000,
+				pauseOnHover: false,
+				pauseOnFocus: false
+			});
 		},
 
 	});
