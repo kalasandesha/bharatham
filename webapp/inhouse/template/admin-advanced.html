@@ -1,0 +1,41 @@
+<div class="mailing-list-section">
+	<table class="table table-striped">
+		<tr>
+			<th>Mailing List</th>
+		</tr>
+		{{#mailingList}}
+		<tr>
+			<td>{{.}}</td>
+		</tr>
+		{{/mailingList}}
+	</table>
+</div>
+
+<div class="queries-section">
+	<table class="table table-striped">
+		<tr>
+			<th>ID</th>
+			<th>Name</th>
+			<th>Email</th>
+			<th>Message</th>
+			<th>Created Date</th>
+			<th>Reviewed</th>
+			<th>Reviewed Date</th>
+		</tr>
+		{{#queries}}
+		<tr>
+			<td>{{id}}</td>
+			<td>{{name}}</td>
+			<td>{{email}}</td>
+			<td>{{{message}}}</td>
+			<td>{{created_date}}</td>
+			<td><input type="checkbox" id="{{id}}" class="reviewed-checkbox"
+				{{reviewed_string}} data-reviewed="{{reviewed}}" /></td>
+			<td><span id="{{id}}-timestamp">{{reviewed_date}}</span></td>
+		</tr>
+		{{/queries}}
+	</table>
+	<div>
+		<button class="btn btn-default update-queries-button">Update</button>
+	</div>
+</div>

@@ -1,6 +1,6 @@
 define([ 'backbone', 'jquery', 'underscore', 'app/app',
-		'text!template/footer.html', 'mustache' ], function(Backbone, $, _,
-		App, TemplateFooter, Mustache) {
+		'text!template/footer.html', 'mustache', 'notify' ], function(Backbone, $, _,
+		App, TemplateFooter, Mustache, Notify) {
 
 	var NavbarView = Backbone.View.extend({
 
@@ -24,13 +24,17 @@ define([ 'backbone', 'jquery', 'underscore', 'app/app',
 		subscribeNewsLetter : function() {
 			var modal = this.modal;
 			var email = modal.find('#subscribe-email').val();
+			modal.modal('hide');
 			$.when(App.subscribeEmail(email)).done(function(result){
-				console.log(result);
-				console.log('Successfully subscribed for newsletter');
+				if(result.success) {
+					$.notify(result.message, "success");
+				} else if(result.error_code == 1) {
+					$.notify(result.message, "info");
+				} else {
+					$.notify(result.message, "error");
+				}
 			}).fail(function(){
-				alert('Oops! Operation failed. Please try again.');
-			}).always(function(){
-				modal.modal('hide');
+				$.notify(result.message, "error");
 			});
 		},
 		
