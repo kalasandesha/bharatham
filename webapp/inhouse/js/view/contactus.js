@@ -5,8 +5,6 @@ define([ 'backbone', 'jquery', 'underscore', 'app/app',
 	var ContactUsView = Backbone.View.extend({
 
 		el : '#content-wrapper',
-		
-		requestInProgress: false,
 
 		events : {
 			'click #contact-submit' : 'submitContactUs'
@@ -25,29 +23,33 @@ define([ 'backbone', 'jquery', 'underscore', 'app/app',
 		submitContactUs : function(event) {
 			var self = this;
 			event.preventDefault();
-			if(self.requestInProgress) {
-				return;
-			} else {
-				self.requestInProgress = true;
-			}
+			
 			var $el = $(self.el);
 			var $name = $el.find("#contactus-name");
 			var $email = $el.find("#contactus-email");
 			var $message = $el.find("#contactus-message");
 			
-			$message = $message.val().replace('\n', '<br />');
+			if(!$email.get(0).checkValidity() || !App.isValidEmail($email.val())) {
+				$.notify("Please enter a valid email address", "error");
+				return;
+			}
 			
-			$.when(App.contactUs($name.val(), $email.val(), $message))
-					.done(function(result) {
-						$.notify(result.message, "success");
-						$name.val("");
-						$email.val("");
-						$message.val("");
-					}).fail(function(result) {
-						$.notify(result.message, "error");
-					}).always(function(){
-						self.requestInProgress = false;
-					});
+			if($name.val() != "" && $email.val() != "" && $message.val() != "") {
+				$el.find('#contact-submit').prop('disabled',true).addClass('disabled');
+				$.when(App.contactUs($name.val(), $email.val(), $message.val().replace(/\n/g, '<br />')))
+				.done(function(result) {
+					$.notify(result.message, "success");
+					$name.val("");
+					$email.val("");
+					$message.val("");
+				}).fail(function(result) {
+					$.notify(result.message, "error");
+				}).always(function(){
+					$el.find('#contact-submit').prop('disabled',false).removeClass('disabled');
+				});
+			} else {
+				$.notify("Please fill all the 3 fields", "error");
+			}
 		}
 
 	});

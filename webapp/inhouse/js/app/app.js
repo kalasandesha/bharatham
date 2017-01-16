@@ -42,6 +42,11 @@ define(
 					return this.getSectionHtml("webapp/inhouse/template/socialinitiatives/" + section + "-content.html");
 				},
 				
+				isValidEmail: function(mail) {
+					var regex = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+(?:[A-Z]{2}|com|org|net|gov|mil|biz|info|mobi|name|aero|jobs|museum)\b/;
+					return regex.test(mail);
+				},
+				
 				getSectionHtml : _.memoize(function(section) {
 					var self = this;
 					var defer = $.Deferred();
