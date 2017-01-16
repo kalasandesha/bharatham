@@ -35,9 +35,9 @@ define([ 'backbone', 'jquery', 'underscore', 'app/app',
 			var $email = $el.find("#contactus-email");
 			var $message = $el.find("#contactus-message");
 			
-			$message = $message.replace('\n', '<br />');
+			$message = $message.val().replace('\n', '<br />');
 			
-			$.when(App.contactUs($name.val(), $email.val(), $message.val()))
+			$.when(App.contactUs($name.val(), $email.val(), $message))
 					.done(function(result) {
 						$.notify(result.message, "success");
 						$name.val("");
