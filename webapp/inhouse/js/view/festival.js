@@ -1,5 +1,5 @@
-define([ 'backbone', 'jquery', 'underscore', 'app/app', 'mustache' ], function(
-		Backbone, $, _, App, Mustache) {
+define([ 'backbone', 'jquery', 'underscore', 'app/app', 'mustache', 'text!template/festivals.html' ], function(
+		Backbone, $, _, App, Mustache, TemplateFestival) {
 
 	var FestivalView = Backbone.View.extend({
 
@@ -18,17 +18,21 @@ define([ 'backbone', 'jquery', 'underscore', 'app/app', 'mustache' ], function(
 
 		renderYear : function(festival, year) {
 			var self = this;
-			$.when(App.getFestivalHtml(festival),
-					App.getFestivalYearHtml(festival, year))
-					.done(
-							function(festivalHtml, yearHtml) {
-								$(self.el).html(festivalHtml);
-								$(".submenu-years [data-year='" + year + "']").addClass("active");
-								$(self.el).find('.submenu-content-area').html(
-										yearHtml);
-							}).fail(function() {
-						alert("Error while loading the content");
-					});
+			if(_.isNull(festival)) {
+				$(self.el).html(Mustache.render(TemplateFestival, {}));
+			} else {
+				$.when(App.getFestivalHtml(festival),
+						App.getFestivalYearHtml(festival, year))
+						.done(
+								function(festivalHtml, yearHtml) {
+									$(self.el).html(festivalHtml);
+									$(".submenu-years [data-year='" + year + "']").addClass("active");
+									$(self.el).find('.submenu-content-area').html(
+											yearHtml);
+								}).fail(function() {
+							alert("Error while loading the content");
+						});
+			}
 		}
 
 	});
