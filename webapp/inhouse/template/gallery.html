@@ -1,12 +1,16 @@
 <div class="container-fluid main-content logo-filler">
-	<div class="h4">Gallery</div>
+	<ol class="breadcrumb">
+		<li><a href="#">Home</a></li>
+		<li class="active">Gallery</li>
+	</ol>
+	<div class="h2 text-center">Gallery</div>
 	{{#imageGroup}}
 	<div class="gallery-group row">
 		<div class="gallery-name">{{groupName}}</div>
 		<div class="gallery-description">{{groupDescription}}</div>
 		<div class="submenu-content-area" data-gallery-name="{{groupName}}">
 			{{#images}} <a href="{{imageLink}}"
-				data-sub-html="<h4>{{imageCaptionHeading}}</h4><p>{{imageCaptionDescription}}</p>">
+				data-sub-html="<div class='h4'>{{imageCaptionHeading}}</div><p>{{imageCaptionDescription}}</p>">
 				<img src="{{imageThumbLink}}" />
 			</a> {{/images}}
 		</div>
