@@ -1,4 +1,6 @@
 <?php
+// require_once ('Mail.php');
+
 try {
 	
 	header ( 'Content-type: application/json' );
@@ -42,6 +44,36 @@ try {
 		$email = $_POST ['email'];
 		$name = $_POST ['name'];
 		$message = $_POST ['message'];
+		
+// 		$host = "ssl://sg2plcpnl0218.prod.sin2.secureserver.net";
+// 		$username = "info@kalasandesha.com";
+// 		$password = "infomail";
+		
+// 		$from = $username;
+// 		$to = $username;
+// 		$subject = "Enquiry";
+		
+// 		$body = "Test Mail";
+		
+// 		$headers = array (
+// 				'From' => $from,
+// 				'To' => $to,
+// 				'Subject' => $subject 
+// 		);
+		
+// 		$smtp = Mail::factory ( 'smtp', array (
+// 				'host' => $host,
+// 				'port' => 465,
+// 				'auth' => true,
+// 				'username' => $username,
+// 				'password' => $password 
+// 		) );
+		
+// 		$mail = $smtp->send ( $to, $headers, $body );
+		
+// 		if (PEAR::isError ( $mail )) {
+// 			throw new Exception("Error while sending mail");
+// 		}
 		
 		$pdo->prepare ( "INSERT INTO queries (name, email, message) VALUES (?, ?, ?)" )->execute ( [ 
 				$name,
