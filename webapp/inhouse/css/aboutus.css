@@ -19,7 +19,23 @@
 	}
 }
 
-.address-map {
+.address-row:nth-child(odd) .address {
+	float: left;
+}
+
+.address-row:nth-child(odd) .address-map {
+	float: right;
+}
+
+.address-row:nth-child(even) .address {
+	float: right;
+}
+
+.address-row:nth-child(even) .address-map {
+	float: left;
+}
+
+.address-map-frame {
 	border: 0;
 	height: 300px;
 	width: 100%

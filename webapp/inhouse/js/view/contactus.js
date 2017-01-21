@@ -1,6 +1,6 @@
 define([ 'backbone', 'jquery', 'underscore', 'app/app',
-		'text!template/contactus.html', 'mustache', 'notify' ], function(Backbone, $, _,
-		App, TemplateContactUs, Mustache, Notify) {
+		'text!template/contactus.html', 'json!data/contactus.json', 'mustache', 'notify' ], function(Backbone, $, _,
+		App, TemplateContactUs, ContactUsJson, Mustache, Notify) {
 
 	var ContactUsView = Backbone.View.extend({
 
@@ -16,7 +16,7 @@ define([ 'backbone', 'jquery', 'underscore', 'app/app',
 
 		render : function(section) {
 			var self = this;
-			$(self.el).html(Mustache.render(TemplateContactUs, {}));
+			$(self.el).html(Mustache.render(TemplateContactUs, ContactUsJson));
 
 		},
 
