@@ -208,11 +208,6 @@
 					"imageThumbLink": "webapp/images/gallery/Nruthyopasana-2015/thumbnails/tn_KPS_4806.JPG"
 				},
 				{
-					"imageLink": "webapp/images/gallery/Nruthyopasana-2015/KPS_4806.JPG",
-					"imageCaptionDescription": "Junior students performance",
-					"imageThumbLink": "webapp/images/gallery/Nruthyopasana-2015/thumbnails/tn_KPS_4806.JPG"
-				},
-				{
 					"imageLink": "webapp/images/gallery/Nruthyopasana-2015/KPS_4822.JPG",
 					"imageCaptionDescription": "Junior students performance",
 					"imageThumbLink": "webapp/images/gallery/Nruthyopasana-2015/thumbnails/tn_KPS_4822.JPG"
@@ -326,18 +321,6 @@
 					"imageCaptionHeading": "Day1-Nruthyopasana",
 					"imageCaptionDescription": "Marga Performance by Vidwan Sandesh Bhargav",
 					"imageThumbLink": "webapp/images/gallery/Nruthyopasana-2014/thumbnails/tn_KPS_5159.JPG"
-				},
-				{
-					"imageLink": "webapp/images/gallery/Nruthyopasana-2014/KPS_5080.JPG",
-					"imageCaptionHeading": "Day1-Nruthyopasana",
-					"imageCaptionDescription": "Marga Performance by Vidwan Sandesh Bhargav",
-					"imageThumbLink": "webapp/images/gallery/Nruthyopasana-2014/thumbnails/tn_KPS_5080.JPG"
-				},
-				{
-					"imageLink": "webapp/images/gallery/Nruthyopasana-2014/KPS_5080.JPG",
-					"imageCaptionHeading": "Day1-Nruthyopasana",
-					"imageCaptionDescription": "Marga Performance by Vidwan Sandesh Bhargav",
-					"imageThumbLink": "webapp/images/gallery/Nruthyopasana-2014/thumbnails/tn_KPS_5080.JPG"
 				},
 				{
 					"imageLink": "webapp/images/gallery/Nruthyopasana-2014/KPS_5208.JPG",
@@ -803,10 +786,10 @@
 					"imageThumbLink": "webapp/images/gallery/Kalabhivardhana-2014/thumbnails/tn_KPS_9792.JPG"
 				},
 				{
-					"imageLink": "webapp/images/gallery/Kalabhivardhana-2014/KPS_9802.JPG",
+					"imageLink": "webapp/images/gallery/Kalabhivardhana-2014/KPS_9807.JPG",
 					"imageCaptionHeading": "Day1-Kalabhivardhana",
 					"imageCaptionDescription": "concert by Natya Kalotthunga Dr.Vasundhara Doraswamy",
-					"imageThumbLink": "webapp/images/gallery/Kalabhivardhana-2014/thumbnails/tn_KPS_9802.JPG"
+					"imageThumbLink": "webapp/images/gallery/Kalabhivardhana-2014/thumbnails/tn_KPS_9807.JPG"
 				},
 				{
 					"imageLink": "webapp/images/gallery/Kalabhivardhana-2014/KPS_9860.JPG",
