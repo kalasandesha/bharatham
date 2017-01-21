@@ -1,6 +1,6 @@
 define([ 'backbone', 'jquery', 'underscore', 'app/app',
-		'text!template/contactus.html', 'json!data/contactus.json', 'mustache', 'notify' ], function(Backbone, $, _,
-		App, TemplateContactUs, ContactUsJson, Mustache, Notify) {
+		'text!template/contactus.html', 'json!data/contactus.json', 'mustache', 'notify', 'jquery.scrollto' ], function(Backbone, $, _,
+		App, TemplateContactUs, ContactUsJson, Mustache, Notify, ScrollTo) {
 
 	var ContactUsView = Backbone.View.extend({
 
@@ -17,7 +17,7 @@ define([ 'backbone', 'jquery', 'underscore', 'app/app',
 		render : function(section) {
 			var self = this;
 			$(self.el).html(Mustache.render(TemplateContactUs, ContactUsJson));
-
+			$(window).scrollTo($(self.el), 500);
 		},
 
 		submitContactUs : function(event) {
@@ -38,7 +38,11 @@ define([ 'backbone', 'jquery', 'underscore', 'app/app',
 				$el.find('#contact-submit').prop('disabled',true).addClass('disabled');
 				$.when(App.contactUs($name.val(), $email.val(), $message.val().replace(/\n/g, '<br />')))
 				.done(function(result) {
-					$.notify(result.message, "success");
+					if(result.message) {
+						$.notify(result.message, "success");
+					} else {
+						$.notify(result.message, "error");
+					}
 					$name.val("");
 					$email.val("");
 					$message.val("");

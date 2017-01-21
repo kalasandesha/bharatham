@@ -1,6 +1,6 @@
 define([ 'backbone', 'jquery', 'underscore', 'app/app',
-		'text!template/socialinitiatives.html', 'mustache' ], function(Backbone, $, _,
-		App, TemplateSocialInitiatives, Mustache) {
+		'text!template/socialinitiatives.html', 'mustache', 'jquery.scrollto' ], function(Backbone, $, _,
+		App, TemplateSocialInitiatives, Mustache, ScrollTo) {
 
 	var SocialInitiatives = Backbone.View.extend({
 
@@ -20,6 +20,7 @@ define([ 'backbone', 'jquery', 'underscore', 'app/app',
 
 			$.when(App.getSocialInitiativesSectionHtml(section)).done(function(html) {
 				$(self.el).find(".submenu-content-area").html(html);
+				$(window).scrollTo($(self.el), 500);
 			}).fail(function() {
 				alert("Error while loading the content");
 			});

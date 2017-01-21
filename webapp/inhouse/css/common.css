@@ -1,17 +1,23 @@
-.registered-symbol {
-	top: -10px;
-	font-size: small;
-}
-
 .logo-filler {
 	margin-top: 100px;
+}
+
+hr {
+  -moz-border-bottom-colors: none;
+  -moz-border-image: none;
+  -moz-border-left-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-top-colors: none;
+  border-color: #EEEEEE -moz-use-text-color #FFFFFF;
+  border-style: solid none;
+  border-width: 1px 0;
+  margin: 18px 0;
 }
 
 .get-involved-placeholder {
 	width: 100%;
 	text-align: center;
 	margin-bottom: 75px;
-	font-size: 24px;
 	font-weight: bold;
 }
 
@@ -21,12 +27,13 @@
 }
 
 @font-face {
-	font-family: FontAwesome;
-	src: url(../../third-party/fonts/FontAwesome.otf);
+	font-family: myriadpro;
+	src: url(../../third-party/fonts/myriadpro-regular.woff);
 }
 
 * {
-	font-family: FontAwesome;
+	font-family: myriadpro;
+	text-align: justify;
 }
 
 body {
@@ -54,13 +61,13 @@ body {
 	font-weight: bold;
 }
 
-@media ( min-width : 1281px) {
+@media ( min-width : 1081px) {
 	.main-content {
-		width: 1280px;
+		width: 1080px;
 	}
 }
 
-@media ( max-width : 1280px) {
+@media ( max-width : 1080px) {
 	.main-content {
 		width: 100%;
 	}

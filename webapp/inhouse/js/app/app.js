@@ -1,5 +1,5 @@
 define(
-		[ 'jquery', 'underscore', 'cookie' ],
+		[ 'jquery', 'underscore' ],
 		function($, _) {
 
 			var instance = null;

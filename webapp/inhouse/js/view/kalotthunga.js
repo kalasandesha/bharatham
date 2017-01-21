@@ -1,6 +1,6 @@
 define([ 'backbone', 'jquery', 'underscore', 'app/app',
-		'text!template/kalotthunga-awardees.html', 'mustache' ], function(Backbone, $, _,
-		App, TemplateKalotthunga, Mustache) {
+		'text!template/kalotthunga-awardees.html', 'mustache', 'jquery.scrollto' ], function(Backbone, $, _,
+		App, TemplateKalotthunga, Mustache, ScrollTo) {
 
 	var KalotthungaView = Backbone.View.extend({
 
@@ -24,6 +24,7 @@ define([ 'backbone', 'jquery', 'underscore', 'app/app',
 			var self = this;
 			$.when(App.getKalotthungaAwardeesHtml(year)).done(function(html) {
 				$(self.el).find(".submenu-content-area").html(html);
+				$(window).scrollTo($(self.el), 500);
 			}).fail(function() {
 				alert("Error while loading the content");
 			});

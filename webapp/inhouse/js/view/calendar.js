@@ -1,8 +1,8 @@
 define([ 'backbone', 'jquery', 'underscore', 'app/app',
 		'text!template/calendar.html', 'text!template/calendar-wrapper.html',
-		'mustache', 'json!data/calendar.json', 'jquery.flip' ], function(
+		'mustache', 'json!data/calendar.json', 'jquery.flip', 'jquery.scrollto' ], function(
 		Backbone, $, _, App, TemplateCalendar, TemplateCalendarWrapper,
-		Mustache, Data, Flip) {
+		Mustache, Data, Flip, ScrollTo) {
 
 	var CalendarView = Backbone.View.extend({
 
@@ -37,6 +37,7 @@ define([ 'backbone', 'jquery', 'underscore', 'app/app',
 				year : self.currentYear
 			}));
 			self.drawCalendarForCurrentYear();
+			$(window).scrollTo($(self.el), 500);
 		},
 
 		drawCalendarForCurrentYear : function() {

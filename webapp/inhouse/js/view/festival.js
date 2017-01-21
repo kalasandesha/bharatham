@@ -1,5 +1,5 @@
-define([ 'backbone', 'jquery', 'underscore', 'app/app', 'mustache', 'text!template/festivals.html' ], function(
-		Backbone, $, _, App, Mustache, TemplateFestival) {
+define([ 'backbone', 'jquery', 'underscore', 'app/app', 'mustache', 'text!template/festivals.html', 'jquery.scrollto' ], function(
+		Backbone, $, _, App, Mustache, TemplateFestival, ScrollTo) {
 
 	var FestivalView = Backbone.View.extend({
 
@@ -29,6 +29,7 @@ define([ 'backbone', 'jquery', 'underscore', 'app/app', 'mustache', 'text!templa
 									$(".submenu-years [data-year='" + year + "']").addClass("active");
 									$(self.el).find('.submenu-content-area').html(
 											yearHtml);
+									$(window).scrollTo($(self.el), 500);
 								}).fail(function() {
 							alert("Error while loading the content");
 						});

@@ -1,6 +1,6 @@
 define([ 'backbone', 'jquery', 'underscore', 'app/app',
-		'text!template/aboutus.html', 'mustache' ], function(Backbone, $, _,
-		App, TemplateAboutUs, Mustache) {
+		'text!template/aboutus.html', 'mustache', 'jquery.scrollto' ], function(Backbone, $, _,
+		App, TemplateAboutUs, Mustache, ScrollTo) {
 
 	var AboutUsView = Backbone.View.extend({
 
@@ -21,6 +21,7 @@ define([ 'backbone', 'jquery', 'underscore', 'app/app',
 
 			$.when(App.getAboutUsSectionHtml(section)).done(function(html) {
 				$(self.el).find(".submenu-content-area").html(html);
+				$(window).scrollTo($(self.el), 500);
 			}).fail(function() {
 				alert("Error while loading the content");
 			});

@@ -9,6 +9,12 @@
 	font-weight: bold;
 }
 
+.registered-symbol {
+	top: -10px;
+	font-weight: 100;
+    font-size: 10px;
+}
+
 .outset-nav {
 	left: -30px;
 	position: relative;
@@ -16,12 +22,10 @@
 
 .collapsed-festival-links, .collapsed-festival-links:hover {
 	color: #ffffff !important;
-	font-size: 15px;
 }
 
 .collapsed-festival-sublinks {
 	color: #ffffff !important;
-	font-size: 13px;
 	margin: 10px;
 }
 
@@ -47,14 +51,11 @@
 }
 
 .menu-bar-seperator {
-	border-bottom-color: #ffa783;
-	border-bottom-style: solid;
-	border-bottom-width: 2px;
+	border-bottom: 2px solid #ffa783;
 }
 
 .menu-item {
 	color: #ffffff !important;
-	font-size: 18px;
 }
 
 .dropdown-toggle.menu-item {
@@ -62,7 +63,7 @@
 }
 
 .menu-item.brand-name {
-	font-size: 24px;
+
 }
 
 .mobile-navbar {

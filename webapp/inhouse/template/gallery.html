@@ -6,10 +6,10 @@
 	<div class="h2 text-center">Gallery</div>
 	{{#imageGroup}}
 	<div class="gallery-group row">
-		<div class="gallery-name">{{groupName}}</div>
-		<div class="gallery-description">{{groupDescription}}</div>
+		<div class="gallery-name text-center h3">{{groupName}}</div>
+		<div class="gallery-description h5">{{groupDescription}}</div>
 		<div class="submenu-content-area" data-gallery-name="{{groupName}}">
-			{{#images}} <a href="{{imageLink}}"
+			{{#images}} <a href="{{imageLink}}" class="gallery-thumbnail"
 				data-sub-html="<div class='h4'>{{imageCaptionHeading}}</div><p>{{imageCaptionDescription}}</p>">
 				<img src="{{imageThumbLink}}" />
 			</a> {{/images}}
