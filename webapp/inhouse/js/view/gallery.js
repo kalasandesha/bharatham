@@ -21,7 +21,7 @@ define([ 'backbone', 'jquery', 'underscore', 'app/app',
 			$(self.el).find('[data-gallery-name]').lightGallery({
 				subHtmlSelectorRelative : false
 			});
-			$(window).scrollTo($(self.el), 500);
+			$(window).scrollTo($(self.el).find('.content-area'), 500);
 		},
 
 	});

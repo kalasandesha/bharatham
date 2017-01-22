@@ -24,7 +24,7 @@ define([ 'backbone', 'jquery', 'underscore', 'app/app',
 			var self = this;
 			$.when(App.getKalotthungaAwardeesHtml(year)).done(function(html) {
 				$(self.el).find(".submenu-content-area").html(html);
-				$(window).scrollTo($(self.el), 500);
+				$(window).scrollTo($(self.el).find('.content-area'), 500);
 			}).fail(function() {
 				alert("Error while loading the content");
 			});

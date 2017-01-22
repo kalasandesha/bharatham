@@ -17,7 +17,7 @@ define([ 'backbone', 'jquery', 'underscore', 'app/app',
 		render : function() {
 			var self = this;
 			$(self.el).html(Mustache.render(TemplateGetInvolved, {}));
-			$(window).scrollTo($(self.el), 500);
+			$(window).scrollTo($(self.el).find('.content-area'), 500);
 		},
 
 	});

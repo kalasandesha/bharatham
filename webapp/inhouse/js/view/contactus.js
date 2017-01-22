@@ -18,7 +18,7 @@ define([ 'backbone', 'jquery', 'underscore', 'app/app',
 		render : function(section) {
 			var self = this;
 			$(self.el).html(Mustache.render(TemplateContactUs, ContactUsJson));
-			$(window).scrollTo($(self.el), 500);
+			$(window).scrollTo($(self.el).find('.content-area'), 500);
 		},
 
 		submitContactUs : function(event) {

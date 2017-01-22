@@ -37,7 +37,7 @@ define([ 'backbone', 'jquery', 'underscore', 'app/app',
 				year : self.currentYear
 			}));
 			self.drawCalendarForCurrentYear();
-			$(window).scrollTo($(self.el), 500);
+			$(window).scrollTo($(self.el).find('.content-area'), 500);
 		},
 
 		drawCalendarForCurrentYear : function() {

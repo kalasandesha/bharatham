@@ -29,7 +29,7 @@ define([ 'backbone', 'jquery', 'underscore', 'app/app', 'mustache', 'text!templa
 									$(".submenu-years [data-year='" + year + "']").addClass("active");
 									$(self.el).find('.submenu-content-area').html(
 											yearHtml);
-									$(window).scrollTo($(self.el), 500);
+									$(window).scrollTo($(self.el).find('.content-area'), 500);
 								}).fail(function() {
 							alert("Error while loading the content");
 						});
