@@ -42,23 +42,27 @@
 		</div>
 	</div>
 	<div class="submenu-content-area">
-		{{#addresses}}
 		<div class="address-row row">
-			<div class="col-md-6 address">
+			{{#addresses}}
+			<div class="col-md-6 col-sm-6 col-xs-12 address">
 				<div class="row">
-					<div class="col-md-3 address-label">Contact:</div>
-					<div class="col-md-9 address-value">{{contact}}</div>
+					<div class="col-md-3 col-sm-3 col-xs-3 address-label">Contact:</div>
+					<div class="col-md-9 col-sm-9 col-xs-9 address-value">{{contact}}</div>
 				</div>
 				<div class="row">
-					<div class="col-md-3 address-label">Address:</div>
-					<div class="col-md-9 address-value">{{{address}}}</div>
+					<div class="col-md-3 col-sm-3 col-xs-3 address-label">Address:</div>
+					<div class="col-md-9 col-sm-9 col-xs-9 address-value">{{{address}}}</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12 col-sm-12 col-xs-12 address-map-row">
+						<div class="btn btn-primary load-map-button" data-url="{{url}}">Click
+							to view on map.</div>
+						<div class="col-md-12 col-sm-12 col-xs-12 address-map-frame-div"></div>
+					</div>
 				</div>
 			</div>
-			<div class="col-md-6 address-map">
-				<iframe src="{{url}}" class="address-map-frame" frameborder="0"
-					allowfullscreen></iframe>
-			</div>
+			{{/addresses}}
 		</div>
-		{{/addresses}}
+
 	</div>
 </div>

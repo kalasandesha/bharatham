@@ -7,7 +7,8 @@ define([ 'backbone', 'jquery', 'underscore', 'app/app',
 		el : '#content-wrapper',
 
 		events : {
-			'click #contact-submit' : 'submitContactUs'
+			'click #contact-submit' : 'submitContactUs',
+			'click .load-map-button' : 'loadMap'
 		},
 
 		initialize : function(section) {
@@ -54,6 +55,14 @@ define([ 'backbone', 'jquery', 'underscore', 'app/app',
 			} else {
 				$.notify("Please fill all the 3 fields", "error");
 			}
+		},
+		
+		loadMap : function(event) {
+			var self = this;
+			var $element = $(event.currentTarget);
+			$element.css({display: 'none'});
+			var url = $element.attr('data-url');
+			$element.parent().find('.address-map-frame-div').html("<iframe class='address-map-frame' src='" + url + "'></iframe>").css({display: 'block'});
 		}
 
 	});
