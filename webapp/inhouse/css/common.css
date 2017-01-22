@@ -2,6 +2,10 @@
 	margin-top: 100px;
 }
 
+.image-wrapper {
+	height: 500px;
+}
+
 hr {
   -moz-border-bottom-colors: none;
   -moz-border-image: none;
