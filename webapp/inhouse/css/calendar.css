@@ -1,4 +1,5 @@
 .year-nav {
+	padding-top: 20px;
     margin-left: 20px;
     margin-right: 20px;
 }
@@ -66,4 +67,8 @@
 
 .not-allowed {
 	cursor: not-allowed;
+}
+
+.calendar {
+	padding-bottom: 20px;
 }
