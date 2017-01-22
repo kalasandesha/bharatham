@@ -27,7 +27,7 @@ define([ 'backbone', 'jquery', 'underscore', 'app/app',
 					});
 				} else {
 					$(self.el).find(".submenu-content-area").html(html);
-					$(self.el).find('article, .team-member-details').readmore();
+					$(self.el).find('article').readmore();
 				}
 				$(window).scrollTo($(self.el).find('.content-area'), 500);
 			}).fail(function() {
