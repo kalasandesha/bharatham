@@ -35,7 +35,7 @@ define([ 'backbone', 'jquery', 'underscore', 'app/app',
 			});
 
 			if (section === "ourgurus") {
-				self.displayGuru("Sathyanarayana");
+				self.displayGuru("Kannan");
 			}
 
 		},
