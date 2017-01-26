@@ -1,6 +1,7 @@
 @CHARSET "UTF-8";
 
-.festival-card {
-
+.festival-card > img {
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
-
