@@ -8,6 +8,12 @@
 	color: #bec7c6;
 }
 
+.footer-heading, .footer-heading:hover, .footer-heading:visited,
+	.footer-heading:active, .footer-heading:focus {
+	color: #fff;
+	text-decoration: none;
+}
+
 @media ( max-width : 991px) {
 	.footer-links, .footer-links:hover, .footer-links:visited, .footer-links:active,
 		.footer-links:focus {
