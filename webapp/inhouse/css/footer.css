@@ -19,6 +19,9 @@
 	.footer-links:last-child::after {
 		content: "";
 	}
+	.copyright-bar {
+		height: 120px;
+	}
 }
 
 a.footer-links {
@@ -44,12 +47,12 @@ a.footer-links {
 
 .subscribe-newsletter-section {
 	padding-top: 10px;
+	text-align: right;
 }
 
 .subscribe-newsletter, .subscribe-newsletter:hover,
 	.subscribe-newsletter:visited, .subscribe-newsletter:active,
 	.subscribe-newsletter:focus {
-	text-align: right;
 	text-decoration: none;
 	color: #ffffff;
 }

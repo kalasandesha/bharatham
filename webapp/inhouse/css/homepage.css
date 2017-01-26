@@ -1,19 +1,60 @@
 @CHARSET "UTF-8";
 
-.festivals-wrapper {
-	height: 400px;
+.vision-heading {
+	color: #2766b5;
+	font-style: italic;
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.vision-text {
+	font-size: 24px;
+}
+
+.citation {
+    padding: 10px 40px;
+}
+
+.home-testimony-citation:before, .home-testimony-citation:after {
+    content: "\"";
+}
+
+.vision-text:after, .vision-text:before {
+	content: "'";
+}
+
+.home-festivals-link {
+	margin-bottom: 20px;
+}
+
+.home-testimony-citation {
+	font-style: italic;
+	font-size: 18px;
+	padding-bottom: 5px;
+}
+
+.author-name {
+	font-size: 16px;
+}
+
+.author-name:after {
+    content: ",";
+}
+
+.author-name:before {
+    content: "- ";
 }
 
 .slick-container {
 	padding: 0px;
 }
 
-.slick-prev {
+.slick-container .slick-prev {
 	left: 5%;
 	z-index: 1050;
 }
 
-.slick-next {
+.slick-container .slick-next {
 	right: 5%;
 	z-index: 1050;
 }

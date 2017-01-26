@@ -26,8 +26,14 @@ define([ 'backbone', 'jquery', 'underscore', 'app/app',
 				cssEase : 'ease-in-out',
 				autoplay : true,
 				autoplaySpeed : 2000,
-				pauseOnHover: false,
-				pauseOnFocus: false
+				pauseOnHover : false,
+				pauseOnFocus : false
+			});
+			$('.home-testimony-row').slick({
+				dots : false,
+				infinite : true,
+				slidesToShow : 1,
+				slidesToScroll : 1
 			});
 		},
 

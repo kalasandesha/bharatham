@@ -1,19 +1,51 @@
 {
 	"items": [
 		{
-			"caption": "Test Caption 1",
-			"message": "To Create Better World For Artists",
+			"caption": "",
+			"message": "",
 			"imageUrl": "webapp/images/homepage/1.jpg"
 		},
 		{
-			"caption": "Test Caption 2",
+			"caption": "",
 			"message": "To Create Better World For Artists",
 			"imageUrl": "webapp/images/homepage/2.jpg"
 		},
 		{
-			"caption": "Test Caption 3",
+			"caption": "",
 			"message": "To Create Better World For Artists",
 			"imageUrl": "webapp/images/homepage/3.jpg"
+		}
+	],
+	"testimony" : [
+		{
+			"citation" : "Kalabhivardhana, a small step to day, will be a big leep tomorrow, it should not succumb to the present market demands and particularly maintain this purity of Indian arts and culture through its activities",
+			"author" : "Vidwan G.S. Ramanujam",
+			"authorDescription": "Renowned Mridangist"
+		},
+		{
+			"citation" : "The award acts as a catalyst and to do more with full of energy. That is why we need programs like Kalabhivardhana and organisations like KSP",
+			"author" : "Vidushi Smt.Rajalakshmi Sridhar",
+			"authorDescription": "Renowned Vocalist"
+		},
+		{
+			"citation" : "The main objective of Kala Sandesha Prathishtana is to develop and propogate art",
+			"author" : "Vidushi Dr.Vasundhara Doraswamy",
+			"authorDescription": "Renowned Bharathanatyam exponent"
+		},
+		{
+			"citation" : "An organisation, which is taking big steps which would benefit numerous artists",
+			"author" : "Sri T.R.Harish",
+			"authorDescription": "Art Patron"
+		},
+		{
+			"citation" : "In this organisation, any noble thought which gets embelished, is not to make money, is not to self justification or self glorification, a noble thought is to create an art fraternity",
+			"author" : "Vidwan Dr. R.S.Nandakumar",
+			"authorDescription": "Renowned Vocalist"
+		},
+		{
+			"citation" : "Kalabhivardhana, For the proliferation of art, without allowing it to perish by passing it on to the generations to come. Preserving and promoting it with self motivation, selflessly",
+			"author" : "Sri Bellary M Raghavendra",
+			"authorDescription": "Director of Akashavani, Mysuru"
 		}
 	]
 }
