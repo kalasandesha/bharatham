@@ -1,4 +1,9 @@
 <?php
+ini_set("include_path", '/home/kprathishtana/php:' . ini_get("include_path") );
+
+require_once ('Mail.php');
+require_once ('Mail/mime.php');
+
 try {
 	
 	header ( 'Content-type: application/json' );
@@ -43,15 +48,92 @@ try {
 		$name = $_POST ['name'];
 		$message = $_POST ['message'];
 		
-		$pdo->prepare ( "INSERT INTO queries (name, email, message) VALUES (?, ?, ?)" )->execute ( [ 
+		$pdo->prepare ( "INSERT INTO queries (name, email, message) VALUES (?, ?, ?)" )->execute ( [
 				$name,
 				$email,
-				$message 
+				$message
 		] );
+		
+		$host = "ssl://sg2plcpnl0218.prod.sin2.secureserver.net";
+		$username = "info@kalasandesha.com";
+		$password = "information";
+		
+		// Mail to info inbox
+		$crlf = "\n";
+		$from = $username;
+		$to = $username;
+		$subject = "New Enquiry from $name [ $email ]";
+		
+		$body = $message;
+		
+		$headers = array (
+				'From' => $email,
+				'To' => $to,
+				'Subject' => $subject 
+		);
+		
+		$smtp = Mail::factory ( 'smtp', array (
+				'host' => $host,
+				'port' => 465,
+				'auth' => true,
+				'username' => $username,
+				'password' => $password 
+		) );
+		
+		$mime = new Mail_mime($crlf);
+				
+		$mime->setHTMLBody($body);
+				
+		$body = $mime->get();
+		$headers = $mime->headers($headers);
+		
+		$mail = $smtp->send ( $to, $headers, $body );
+		
+		if (PEAR::isError ( $mail )) {
+			throw new Exception ( "Error while sending mail to info team" );
+		}
+		
+		// Mail to end user
+		$to = $email;
+		$subject = "Thanks for your query";
+		
+		$body = "Hello $name,<br />Thanks for your query.<br /><br />" 
+				+ "You have submitted below query to Kala Sandesha Prathishtana<br /> $message<br /><br />" 
+				+ "We will get back to you shortly.<br /><br />" 
+				+ "Regards,<br />" 
+				+ "Team KSP";
+		
+		$headers = array (
+				'From' => $from,
+				'To' => $to,
+				'Subject' => $subject 
+		);
+				
+		$mime = new Mail_mime($crlf);
+				
+		$mime->setHTMLBody($body);
+				
+		$body = $mime->get();
+		$headers = $mime->headers($headers);
+		
+		$smtp = Mail::factory ( 'smtp', array (
+				'host' => $host,
+				'port' => 465,
+				'auth' => true,
+				'username' => $username,
+				'password' => $password
+		) );
+		
+		$mail = $smtp->send ( $to, $headers, $body );
+		
+		if (PEAR::isError ( $mail )) {
+			throw new Exception ( "Error while sending mail to end user" );
+		}
 		
 		$result ['success'] = true;
 		$result ['message'] = "Thanks for message. We will get back to you shortly.";
 		echo json_encode ( $result );
+		
 	} elseif ($option == 'adminSection') {
 		
 		if (! isset ( $_POST ['key'] )) {
@@ -77,6 +159,7 @@ try {
 		$result ['success'] = true;
 		$result ['message'] = "Mailing list retrieved ";
 		echo json_encode ( $result );
+		
 	} elseif ($option == 'adminSectionUpdate') {
 		
 		if (! isset ( $_POST ['key'] )) {
@@ -113,10 +196,12 @@ try {
 		$result ['message'] = "Reviewed queries updated";
 		echo json_encode ( $result );
 	}
+	
 } catch ( Exception $e ) {
+	
 	$error ['success'] = false;
 	$error ['message'] = $e->getMessage ();
-	$result ['error_code'] = - 1;
+	$result ['error_code'] = -1;
 	echo json_encode ( $error );
 }
 ?>

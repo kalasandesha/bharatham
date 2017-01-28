@@ -46,7 +46,7 @@ define([ 'backbone', 'jquery', 'underscore', 'app/app',
 		
 		checkValidity: _.debounce(function(ev) {
 			var self = this;
-			if($(ev.currentTarget)[0].checkValidity()) {
+			if($(ev.currentTarget)[0].checkValidity() && App.isValidEmail($(ev.currentTarget).val())) {
 				$(this.modal).find('.subscribe-button').removeClass('disabled').removeAttr('disabled');
 			} else {
 				$(this.modal).find('.subscribe-button').addClass('disabled').attr('disabled','disabled');

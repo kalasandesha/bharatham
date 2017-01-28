@@ -1,14 +1,16 @@
-<div class="container-fluid main-content">
+<div class="container-fluid">
 	<div class="row">
 		{{#events}}
-		<div class="col-md-3 calendar-card-wrapper ">
+		<div class="col-md-4 calendar-card-wrapper ">
 			<div class="flip calendar-card">
 				<div class="front" style="background-image: url('{{photo}}')">
 					<img class="calendar-image" src="{{photo}}" />
-					<div class="calender-caption">{{name}}</div>
+<!-- 					<div class="calender-caption">{{name}}</div> -->
 				</div>
-				<div class="back calender-back-caption">
-					{{description}}
+				<div class="back">
+					<div class="calender-back-caption">
+						<div class="calender-back-text text-center">{{{description}}}</div>
+					</div>
 				</div>
 			</div>
 		</div>
